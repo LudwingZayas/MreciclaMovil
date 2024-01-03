@@ -1,5 +1,48 @@
 
-#boton {
-  bottom: 50px;
-  left: 100px;
+
+
+ion-button {
+  --background: #80a943;
+  --background-hover: #d6e44b;
+  --background-activated: #88f4be;
+  --background-focused: #88f4be;
+
+  --color: #fff;
+
+  --border-color: #80a943;
+  --border-width: 1px;
+
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+  --ripple-color: #d6e44b;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+
+}
+ion-grid {
+  --ion-grid-padding: 20px;
+
+  --ion-grid-padding-xs: 20px;
+  --ion-grid-padding-sm: 20px;
+  --ion-grid-padding-md: 20px;
+  --ion-grid-padding-lg: 20px;
+  --ion-grid-padding-xl: 20px;
+
+  --ion-grid-column-padding: 30px;
+
+  --ion-grid-column-padding-xs: 30px;
+  --ion-grid-column-padding-sm: 30px;
+  --ion-grid-column-padding-md: 30px;
+  --ion-grid-column-padding-lg: 30px;
+  --ion-grid-column-padding-xl: 30px;
+  
+}
+
+ion-col {
+  background-color: #135d54;
+  border: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+ 
 }

@@ -7,13 +7,12 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './components/menu/menu.component';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
   IonicModule.forRoot(),
   AppRoutingModule,
-  ComponentsModule
+  ComponentsModule,
 ],
 
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

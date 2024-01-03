@@ -5,7 +5,7 @@ import { MenuComponent } from './menu/menu.component';
 import { IonicModule } from '@ionic/angular';
 @NgModule({
   declarations: [
-    MenuComponent],
+    MenuComponent,HeaderComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[
     MenuComponent],

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
-
+import { CatalogosComponent } from './components/catalogos/catalogos.component';
+import { InventarioEntradaComponent } from './components/inventario-entrada/inventario-entrada.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -14,7 +15,14 @@ const routes: Routes = [
   },
   {
     path: 'header', component:HeaderComponent,
+  },
+  {
+    path:'catalogos', component:CatalogosComponent,
+  },
+  {
+    path:'inventarioEntrada', component:InventarioEntradaComponent
   }
+
 ];
 @NgModule({
   imports: [

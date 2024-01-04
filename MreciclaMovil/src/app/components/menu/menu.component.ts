@@ -12,6 +12,11 @@ export class MenuComponent  implements OnInit {
   irHeader(){
     this.router.navigate(['/header'])
   }
+
+  irCat(){
+    this.router.navigate(['/catalogos'])
+  }
+
   ngOnInit() {}
 
 }

@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { CatalogosComponent } from './components/catalogos/catalogos.component';
 import { InventarioEntradaComponent } from './components/inventario-entrada/inventario-entrada.component';
+import { TiemposProduccionComponent } from './components/tiempos-produccion/tiempos-produccion.component';
+import { TiemposProduccionCrearComponent } from './components/tiempos-produccion/tiempos-produccion-crear/tiempos-produccion-crear.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -20,9 +22,16 @@ const routes: Routes = [
     path:'catalogos', component:CatalogosComponent,
   },
   {
-    path:'inventarioEntrada', component:InventarioEntradaComponent
+    path:'inventarioEntrada', component:InventarioEntradaComponent,
+  },
+  //Rutas para tiempos de proddución--->
+  {
+    path: 'TiemposProduccion', component:TiemposProduccionComponent,
+  },
+  {
+    path:'TiemposProduccionCrear', component:TiemposProduccionCrearComponent
   }
-
+  // --->>>>>>
 ];
 @NgModule({
   imports: [

@@ -14,6 +14,9 @@ export class HeaderComponent  implements OnInit {
   irInventario(){
     this.router.navigate(['/inventarioEntrada'])
   }
+  irTiemposProd(){
+    this.router.navigate(['/TiemposProduccion'])
+  }
 
   ngOnInit() {}
 

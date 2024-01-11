@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./tiempos-produccion.component.scss'],
 })
 export class TiemposProduccionComponent  implements OnInit {
-
+  
   constructor(private router:Router) { }
 
   irtiemposcrear(){
@@ -15,5 +15,5 @@ export class TiemposProduccionComponent  implements OnInit {
   }
 
   ngOnInit() {}
-
+  
 }

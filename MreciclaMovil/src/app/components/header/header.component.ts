@@ -17,7 +17,9 @@ export class HeaderComponent  implements OnInit {
   irTiemposProd(){
     this.router.navigate(['/TiemposProduccion'])
   }
-
+  SolicitudesAdmin(){
+    this.router.navigate(['/SolicitudesAdmin'])
+  }
   ngOnInit() {}
 
 }

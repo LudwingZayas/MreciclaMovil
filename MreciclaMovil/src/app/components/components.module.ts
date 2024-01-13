@@ -8,9 +8,11 @@ import { HomePageModule } from '../home/home.module';
 import { InventarioEntradaComponent } from './inventario-entrada/inventario-entrada.component';
 import { TiemposProduccionComponent } from './tiempos-produccion/tiempos-produccion.component';
 import { TiemposProduccionCrearComponent } from './tiempos-produccion/tiempos-produccion-crear/tiempos-produccion-crear.component';
+import { SolicitudesAdminComponent } from './solicitudes-admin/solicitudes-admin.component';
+
 @NgModule({
   declarations: [
-    MenuComponent,HeaderComponent,CatalogosComponent,InventarioEntradaComponent,TiemposProduccionComponent,TiemposProduccionCrearComponent],
+    MenuComponent,HeaderComponent,CatalogosComponent,InventarioEntradaComponent,TiemposProduccionComponent,TiemposProduccionCrearComponent,SolicitudesAdminComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[
     MenuComponent],

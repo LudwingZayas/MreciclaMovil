@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tiempos-produccion-crear',
   templateUrl: './tiempos-produccion-crear.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TiemposProduccionCrearComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router ) { }
+
+  Salir(){
+    this.router.navigate(['/TiemposProduccion'])
+  }
 
   ngOnInit() {}
 

@@ -20,6 +20,9 @@ export class HeaderComponent  implements OnInit {
   SolicitudesAdmin(){
     this.router.navigate(['/SolicitudesAdmin'])
   }
+  irInventarioSalida(){
+    this.router.navigate(['InventarioSalida'])
+  }
   ngOnInit() {}
 
 }

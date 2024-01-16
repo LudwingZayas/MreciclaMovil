@@ -6,6 +6,7 @@ import { InventarioEntradaComponent } from './components/inventario-entrada/inve
 import { TiemposProduccionComponent } from './components/tiempos-produccion/tiempos-produccion.component';
 import { TiemposProduccionCrearComponent } from './components/tiempos-produccion/tiempos-produccion-crear/tiempos-produccion-crear.component';
 import { SolicitudesAdminComponent } from './components/solicitudes-admin/solicitudes-admin.component';
+import { InventarioSalidaComponent } from './components/catalogos/inventario-salida/inventario-salida.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -34,6 +35,9 @@ const routes: Routes = [
   },
   {
     path:'SolicitudesAdmin', component:SolicitudesAdminComponent
+  },
+  {
+    path:'InventarioSalida', component:InventarioSalidaComponent
   }
   // --->>>>>>
 ];

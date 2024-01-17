@@ -16,6 +16,9 @@ export class MenuComponent  implements OnInit {
   irCat(){
     this.router.navigate(['/catalogos'])
   }
+  irlogin(){
+    this.router.navigate(['/login'])
+  }
 
   ngOnInit() {}
 

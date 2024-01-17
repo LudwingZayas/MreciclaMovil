@@ -1,5 +1,25 @@
 <app-menu></app-menu>
-<div style="text-align: center; position: relative;">
-  <h1 style="align-items: center;">INVENTARIO ENTRADA</h1>
-</div>
+
+<h1 style="text-align: center;">INVENTARIO ENTRADA</h1>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">ID</ion-col>
+      <ion-col size="3">Producto</ion-col>
+      <ion-col size="3">Peso</ion-col>
+      <ion-col size="3">Action</ion-col>
+    </ion-row>
+
+    <!-- Filas de la tabla (puedes usar *ngFor para mostrar datos dinámicamente) -->
+    <ion-row *ngFor="let Inventarios of Inventario">
+      <ion-col size="3">{{ Inventarios.id }}</ion-col>
+      <ion-col size="3">{{ Inventarios.Producto }}</ion-col>
+      <ion-col size="3">{{ Inventarios.Peso }}</ion-col>
+      <ion-col size="3"><ion-button expand="block" color="primary" (click)="InventarioEditar()" >Editar</ion-button>
+        <ion-button expand="block" color="danger" >Eliminar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
  

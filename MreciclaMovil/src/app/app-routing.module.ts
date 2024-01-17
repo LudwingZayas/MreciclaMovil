@@ -7,6 +7,10 @@ import { TiemposProduccionComponent } from './components/tiempos-produccion/tiem
 import { TiemposProduccionCrearComponent } from './components/tiempos-produccion/tiempos-produccion-crear/tiempos-produccion-crear.component';
 import { SolicitudesAdminComponent } from './components/solicitudes-admin/solicitudes-admin.component';
 import { InventarioSalidaComponent } from './components/catalogos/inventario-salida/inventario-salida.component';
+import { MenuController } from '@ionic/angular';
+import { MenuComponent } from './components/menu/menu.component';
+import { LoginComponent } from './components/login/login.component';
+import { InventarioEntradaEditarComponent } from './components/inventario-entrada/inventario-entrada-editar/inventario-entrada-editar.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -14,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -22,9 +26,13 @@ const routes: Routes = [
   },
   {
     path:'catalogos', component:CatalogosComponent,
-  },
+  }, 
+  //inventarios rutas
   {
     path:'inventarioEntrada', component:InventarioEntradaComponent,
+  },
+  {
+    path:'inventarioEditar', component:InventarioEntradaEditarComponent
   },
   //Rutas para tiempos de proddución--->
   {
@@ -38,7 +46,14 @@ const routes: Routes = [
   },
   {
     path:'InventarioSalida', component:InventarioSalidaComponent
+  },
+  {
+    path:'menu', component:MenuComponent
+  },
+  {
+    path:'login', component:LoginComponent
   }
+
   // --->>>>>>
 ];
 @NgModule({

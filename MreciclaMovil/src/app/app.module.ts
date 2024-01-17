@@ -6,6 +6,10 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { style } from '@angular/animations';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
@@ -13,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   AppRoutingModule,
   ComponentsModule,
   BrowserAnimationsModule,
+  FormsModule,
+  ReactiveFormsModule
 
 
 ],

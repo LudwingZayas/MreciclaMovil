@@ -16,10 +16,68 @@
       <ion-col size="3">{{ Inventarios.id }}</ion-col>
       <ion-col size="3">{{ Inventarios.Producto }}</ion-col>
       <ion-col size="3">{{ Inventarios.Peso }}</ion-col>
-      <ion-col size="3"><ion-button expand="block" color="primary" (click)="InventarioEditar()" >Editar</ion-button>
-        <ion-button expand="block" color="danger" >Eliminar</ion-button>
-      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="block" color="primary" (click)="InventarioEditar()" >Editar</ion-button>
+        <ion-button color="danger" expand="block" id="present-alert">ELIMINAR</ion-button>
+        <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons"></ion-alert>
+        <!-- <ion-button expand="block" color="danger" >Eliminar</ion-button> -->
+      </ion-col> 
     </ion-row>
   </ion-grid>
 </ion-content>
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

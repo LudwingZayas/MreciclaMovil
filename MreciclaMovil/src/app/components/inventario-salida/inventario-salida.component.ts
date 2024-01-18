@@ -1,25 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-inventario-entrada',
-  templateUrl: './inventario-entrada.component.html',
-  styleUrls: ['./inventario-entrada.component.scss'],
+  selector: 'app-inventario-salida',
+  templateUrl: './inventario-salida.component.html',
+  styleUrls: ['./inventario-salida.component.scss'],
 })
-export class InventarioEntradaComponent  implements OnInit {
+export class InventarioSalidaComponent  implements OnInit {
 
-  public alertButtons = [
-    {
-      text: 'No',
-      cssClass: 'alert-button-cancel',
-    },
-    {
-      text: 'Yes',
-      cssClass: 'alert-button-confirm',
-    },
-  ];
-
-  Inventario = [
+  InventarioSalida = [
     { id: '1', Producto: 'Tela', Peso: '100'+' kg', Action:'' },
     { id: '2', Producto: 'Borra', Peso: '200'+' kg',Action:'' },
     { id: '3', Producto: 'Hilo', Peso: '120'+' kg',Action:'' },

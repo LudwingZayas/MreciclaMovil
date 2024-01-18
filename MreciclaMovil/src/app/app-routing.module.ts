@@ -6,7 +6,7 @@ import { InventarioEntradaComponent } from './components/inventario-entrada/inve
 import { TiemposProduccionComponent } from './components/tiempos-produccion/tiempos-produccion.component';
 import { TiemposProduccionCrearComponent } from './components/tiempos-produccion/tiempos-produccion-crear/tiempos-produccion-crear.component';
 import { SolicitudesAdminComponent } from './components/solicitudes-admin/solicitudes-admin.component';
-import { InventarioSalidaComponent } from './components/catalogos/inventario-salida/inventario-salida.component';
+import { InventarioSalidaComponent } from './components/inventario-salida/inventario-salida.component';
 import { MenuController } from '@ionic/angular';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';

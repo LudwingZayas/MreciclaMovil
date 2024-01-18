@@ -9,7 +9,17 @@ export class InventarioEntradaEditarComponent  implements OnInit {
 
   constructor(private router:Router) { }
 
+  actualizarDatos() {
+    // Coloca aquí la lógica para actualizar tus datos
+    console.log('Actualizando datos...');
+    // Puedes agregar la lógica de actualización aquí
+
+    // Por ejemplo, puedes recargar la página actual
+    window.location.reload();
+  }
+
   Salir(){
+
     this.router.navigate(['/inventarioEntrada'])
   }
 

@@ -38,6 +38,11 @@ export class InventarioEntradaComponent  implements OnInit {
    InventarioEditar(){
     this.router.navigate(['/inventarioEditar'])
   }
-  ngOnInit() {}
+  ngOnInit() {
+
+                                    
+      // window.location.reload();
+
+  }
 
 }

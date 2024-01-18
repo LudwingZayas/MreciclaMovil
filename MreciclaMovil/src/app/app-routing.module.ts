@@ -11,6 +11,8 @@ import { MenuController } from '@ionic/angular';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
 import { InventarioEntradaEditarComponent } from './components/inventario-entrada/inventario-entrada-editar/inventario-entrada-editar.component';
+import { SolicitudesEditarComponent } from './components/solicitudes-admin/solicitudes-editar/solicitudes-editar.component';
+import { TiemposProduccionEditarComponent } from './components/tiempos-produccion/tiempos-produccion-editar/tiempos-produccion-editar.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -42,6 +44,10 @@ const routes: Routes = [
     path:'TiemposProduccionCrear', component:TiemposProduccionCrearComponent
   },
   {
+    path:'TiemposProduccionEditar', component:TiemposProduccionEditarComponent
+  },
+  //
+  {
     path:'SolicitudesAdmin', component:SolicitudesAdminComponent
   },
   {
@@ -52,6 +58,12 @@ const routes: Routes = [
   },
   {
     path:'login', component:LoginComponent
+  },
+  {
+    path:'SolicitudesEditar', component:SolicitudesEditarComponent
+  },
+  {
+    path:'Solicitudes', component:SolicitudesAdminComponent
   }
 
   // --->>>>>>

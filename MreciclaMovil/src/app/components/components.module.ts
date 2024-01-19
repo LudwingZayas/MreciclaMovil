@@ -14,6 +14,7 @@ import { InventarioEntradaEditarComponent } from './inventario-entrada/inventari
 import { InventarioSalidaComponent } from './inventario-salida/inventario-salida.component';
 import { SolicitudesEditarComponent } from './solicitudes-admin/solicitudes-editar/solicitudes-editar.component';
 import { TiemposProduccionEditarComponent } from './tiempos-produccion/tiempos-produccion-editar/tiempos-produccion-editar.component';
+import { SolicitudesAdminCrearComponent } from './solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TiemposProduccionEditarComponent } from './tiempos-produccion/tiempos-p
     InventarioEntradaEditarComponent,
     InventarioSalidaComponent,
     SolicitudesEditarComponent,
-    TiemposProduccionEditarComponent
+    TiemposProduccionEditarComponent,
+    SolicitudesAdminCrearComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[LoginComponent,

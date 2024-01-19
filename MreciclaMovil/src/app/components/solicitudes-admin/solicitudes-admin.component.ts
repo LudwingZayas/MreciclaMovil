@@ -19,11 +19,11 @@ export class SolicitudesAdminComponent  implements OnInit {
   ];
 
   Solicitudes = [
-  { id: '1', solicitud: 'ajuste de maquina', Tipo: 'maquinaria', Action:'' },
-  { id: '2', solicitud: 'Mas insumos', Tipo: 'hilos',Action:'' },
-  { id: '3', solicitud: 'material para reparación de maquina', Tipo: 'agujas',Action:'' },
-  { id: '4', solicitud: 'presupuesto para ajustar maquina', Tipo: 'ajustes',Action:'' },
-  { id: '5', solicitud: 'presupuesto para piezas', Tipo: 'piezas',Action:'' },
+  { id: '1', solicitud: 'ajuste de maquina', Estado: 'pendiente', Action:'' },
+  { id: '2', solicitud: 'Mas insumos', Estado: 'pendiente',Action:'' },
+  { id: '3', solicitud: 'pendiente', Estado: 'pendiente',Action:'' },
+  { id: '4', solicitud: 'presupuesto para ajustar maquina', Estado: 'pendiente',Action:'' },
+  { id: '5', solicitud: 'presupuesto para piezas', Estado: 'pendiente',Action:'' },
   
   // ... otros datos ...
 ];
@@ -31,10 +31,9 @@ export class SolicitudesAdminComponent  implements OnInit {
 
   constructor(private router:Router) { }
 
- 
 
-  InventarioEditar(){
-    this.router.navigate(['/inventarioEditar'])
+  SolicitudesCrear(){
+    this.router.navigate(['/SolicitudesCrear'])
   }
 
   ngOnInit() {}

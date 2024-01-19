@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { InventarioEntradaEditarComponent } from './components/inventario-entrada/inventario-entrada-editar/inventario-entrada-editar.component';
 import { SolicitudesEditarComponent } from './components/solicitudes-admin/solicitudes-editar/solicitudes-editar.component';
 import { TiemposProduccionEditarComponent } from './components/tiempos-produccion/tiempos-produccion-editar/tiempos-produccion-editar.component';
+import { SolicitudesAdminCrearComponent } from './components/solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -46,10 +47,17 @@ const routes: Routes = [
   {
     path:'TiemposProduccionEditar', component:TiemposProduccionEditarComponent
   },
-  //
+  //Solicitudes
   {
     path:'SolicitudesAdmin', component:SolicitudesAdminComponent
   },
+  {
+    path:'SolicitudesEditar', component:SolicitudesEditarComponent
+  },
+  {
+    path:'SolicitudesCrear', component:SolicitudesAdminCrearComponent
+  },
+  //
   {
     path:'InventarioSalida', component:InventarioSalidaComponent
   },
@@ -58,13 +66,8 @@ const routes: Routes = [
   },
   {
     path:'login', component:LoginComponent
-  },
-  {
-    path:'SolicitudesEditar', component:SolicitudesEditarComponent
-  },
-  {
-    path:'Solicitudes', component:SolicitudesAdminComponent
   }
+ 
 
   // --->>>>>>
 ];

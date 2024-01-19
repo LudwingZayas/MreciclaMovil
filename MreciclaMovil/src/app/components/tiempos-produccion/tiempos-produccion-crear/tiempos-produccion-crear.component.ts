@@ -10,7 +10,7 @@ export class TiemposProduccionCrearComponent  implements OnInit {
   constructor(private router:Router ) { }
 
   Salir(){
-    this.router.navigate(['/TiemposProduccion'])
+    this.router.navigate(['/TiemposProduccionCrear'])
   }
 
   ngOnInit() {}

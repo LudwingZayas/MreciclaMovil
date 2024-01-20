@@ -63,4 +63,8 @@
   .title-card {
     line-height: 40px;
   }
-  
+  @media only screen and (max-width: 600px) {
+    .mainItems {
+      grid-template-columns: auto;
+    }
+  }

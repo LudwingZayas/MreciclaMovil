@@ -9,6 +9,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class HeaderComponent  implements OnInit {
 
+  
   constructor(private router:Router) { }
 
   irInventario(){

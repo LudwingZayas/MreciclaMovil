@@ -1,116 +1,125 @@
 
-<app-menu ></app-menu>
-<div style="text-align: center;">
-  <h1 style="align-items: center; color: aliceblue;">INICIO</h1>
-</div>
-<ion-grid style="height: 900;">
-  <ion-row style="height: 900;">
-    <ion-col>
-      <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3" >
-        <!-- <a [routerLink]="['/dashboard/inventario/inventarios']" > -->
-          <div  class="card bg-c-pink order-card">
-              <div class="card-block" (click)="irInventario()">
-                  <h2 class="text-right"><ion-icon name="briefcase-outline"></ion-icon><span></span></h2>
-                  <p class="m-b-0 title-card">Inventario de entrada</p>
-              </div>
-          </div>
-        <!-- </a> -->
-      </div>
-     
-    </ion-col>
-    <ion-col>
-      <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3" >
-        <!-- <a [routerLink]="['/dashboard/inventario/inventarioSalida']" >  -->
-          <div class="card bg-c-purple order-card">
-              <div class="card-block" (click)="irInventarioSalida()">
-                  <h2 class="text-right"><ion-icon name="briefcase-outline"></ion-icon><span></span></h2>
-                  <p class="m-b-0 title-card">Inventario de salida</p>
-              </div>
-          </div>
-        <!-- </a> -->
-      </div>
-      <br>
-    </ion-col>
-  </ion-row>
-  <br>
-  <br>
-  <ion-row>
-    <ion-col>
-      <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
-        <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
-          <div class="card bg-c-yellow order-card">
-              <div class="card-block" (click)="irTiemposProd()">
-                  <h2 class="text-right"><ion-icon name="timer-outline"></ion-icon></h2>
-                  <p class="m-b-0 title-card">Tiempos producción</p>
-              </div>
-          </div>
-        <!-- </a> -->
+<app-menu scrollX="true" scrollY="false"></app-menu>
+<ion-content  >
+
+
+  <div style="text-align: center;">
+    <h1 style="align-items: center; color: aliceblue;">INICIO</h1>
+  </div>
+  <ion-grid scrollX="true" scrollY="false" style="height: 900;">
+    <ion-row style="height: 900;">
+      <ion-col>
+        <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3" >
+          <!-- <a [routerLink]="['/dashboard/inventario/inventarios']" > -->
+            <div  class="card bg-c-pink order-card">
+                <div class="card-block" (click)="irInventario()">
+                    <h2 class="text-right"><ion-icon name="briefcase-outline"></ion-icon><span></span></h2>
+                    <p class="m-b-0 title-card">Inventario de entrada</p>
+                </div>
+            </div>
+          <!-- </a> -->
+        </div>
+       <br>
+       <br>
+      </ion-col>
+      <ion-col>
+        <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3" >
+          <!-- <a [routerLink]="['/dashboard/inventario/inventarioSalida']" >  -->
+            <div class="card bg-c-purple order-card">
+                <div class="card-block" (click)="irInventarioSalida()">
+                    <h2 class="text-right"><ion-icon name="briefcase-outline"></ion-icon><span></span></h2>
+                    <p class="m-b-0 title-card">Inventario de salida</p>
+                </div>
+            </div>
+          <!-- </a> -->
         </div>
         <br>
         <br>
-        <br>
-    </ion-col>
-    <ion-col>
-      <div  style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
-        <!-- <a [routerLink]="['/dashboard/produccion/produccionList']"> -->
-          <div class="card bg-c-blue order-card">
-            <div class="card-block" (click)="SolicitudesAdmin()">
-              <h2 class="text-right"><ion-icon name="pencil-outline"></ion-icon><span></span></h2>
-              <p class="m-b-0 title-card">Solicitudes</p>
+      </ion-col>
+    </ion-row>
+   
+    <ion-row>
+      <ion-col>
+        <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
+          <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block" (click)="irTiemposProd()">
+                    <h2 class="text-right"><ion-icon name="timer-outline"></ion-icon></h2>
+                    <p class="m-b-0 title-card">Tiempos producción</p>
+                </div>
             </div>
+          <!-- </a> -->
           </div>
-        <!-- </a> -->
-      </div>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
-        <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
-          <div class="card bg-c-red order-card">
-              <div class="card-block" (click)="irTiemposProd()">
-                  <h2 class="text-right"><ion-icon name="person"></ion-icon></h2>
-                  <p class="m-b-0 title-card">Usuarios generales</p>
+          <br>
+          <br>
+      </ion-col>
+      <ion-col>
+        <div  style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
+          <!-- <a [routerLink]="['/dashboard/produccion/produccionList']"> -->
+            <div class="card bg-c-blue order-card">
+              <div class="card-block" (click)="SolicitudesAdmin()">
+                <h2 class="text-right"><ion-icon name="pencil-outline"></ion-icon><span></span></h2>
+                <p class="m-b-0 title-card">Solicitudes</p>
               </div>
-          </div>
-        <!-- </a> -->
+            </div>
+          <!-- </a> -->
         </div>
         <br>
         <br>
-    </ion-col>
-    <ion-col>
-      <div  style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
-        <!-- <a [routerLink]="['/dashboard/produccion/produccionList']"> -->
-          <div class="card bg-c-brown order-card">
-            <div class="card-block" (click)="SolicitudesAdmin()">
-              <h2 class="text-right"><ion-icon name="bar-chart-outline"></ion-icon><span></span></h2>
-              <p class="m-b-0 title-card">Control de gastos</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
+          <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
+            <div class="card bg-c-red order-card">
+                <div class="card-block" (click)="irTiemposProd()">
+                    <h2 class="text-right"><ion-icon name="person"></ion-icon></h2>
+                    <p class="m-b-0 title-card">Usuarios generales</p>
+                </div>
             </div>
+          <!-- </a> -->
           </div>
-        <!-- </a> -->
-      </div>
-    </ion-col>
-  </ion-row>
-  <br>
-  <ion-row>
-    <ion-col>
-      <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
-        <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
-          <div class="card bg-c-green order-card">
-              <div class="card-block" (click)="irTiemposProd()">
-                  <h2 class="text-right"><ion-icon name="cube-outline"></ion-icon></h2>
-                  <p class="m-b-0 title-card">Producción general</p>
+          <br>
+          <br>
+      </ion-col>
+      <ion-col>
+        <div  style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
+          <!-- <a [routerLink]="['/dashboard/produccion/produccionList']"> -->
+            <div class="card bg-c-brown order-card">
+              <div class="card-block" (click)="SolicitudesAdmin()">
+                <h2 class="text-right"><ion-icon name="bar-chart-outline"></ion-icon><span></span></h2>
+                <p class="m-b-0 title-card">Control de gastos</p>
               </div>
-          </div>
-        <!-- </a> -->
-        </div >
+            </div>
+          <!-- </a> -->
+        </div>
         <br>
         <br>
-    </ion-col>
-    <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
-    </div>
-    <ion-col>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
+          <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
+            <div class="card bg-c-green order-card">
+                <div class="card-block" (click)="irTiemposProd()">
+                    <h2 class="text-right"><ion-icon name="cube-outline"></ion-icon></h2>
+                    <p class="m-b-0 title-card">Producción general</p>
+                </div>
+            </div>
+          <!-- </a> -->
+          </div >
+          <br>
+          <br>
+      </ion-col>
+      <div style="height: 110px; width:200px;" class="col-md-4 col-xl-3">
+      </div>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>
 

@@ -5,14 +5,14 @@ import { usuario } from './login';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class LoginService {
-// API: string = 'https://recicladora.arvispace.com/PhpAngular/'
+  private apiUrl = 'http://localhost/PhpAngular/MreciclaMovil';
 
-  API: string = 'http://localhost/PhpAngular/';
+  constructor(private http: HttpClient) {}
 
-  constructor( private clientService:HttpClient) { }
-
-  verUsuario(datosUsuario:usuario):Observable<any>{
-    return this.clientService.post(this.API+"?login=",datosUsuario);
-  }
+  iniciarSesion(datos: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, datos);
+}
 }

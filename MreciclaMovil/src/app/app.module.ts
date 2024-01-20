@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { style } from '@angular/animations';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
@@ -18,7 +19,9 @@ import { style } from '@angular/animations';
   ComponentsModule,
   BrowserAnimationsModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  HttpClientModule,
+  
 
 
 ],

@@ -14,19 +14,20 @@
 <br>
 <br>
 
-<ion-content class="ion-padding">
+  <ion-content class="ion-padding">
+    <br>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" formControlName="Correo"></ion-input>
+    </ion-item>
   <br>
-  <ion-item>
-    <ion-label position="floating">Usuario</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-<br>
-  <ion-item>
-    <ion-label  position="floating">Contraseña</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="Pass"></ion-input>
+    </ion-item>
+  
+    <br>
+  
+    <ion-button  expand="block " (click)="enviarDatos()">Iniciar Sesión</ion-button>
+  </ion-content>
 
-  <br>
-
-  <ion-button  expand="block"  (click)="login()">Iniciar Sesión</ion-button>
-</ion-content>

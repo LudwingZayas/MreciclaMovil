@@ -30,11 +30,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InventarioSalidaComponent,
     SolicitudesEditarComponent,
     TiemposProduccionEditarComponent,
-    SolicitudesAdminCrearComponent,
+    SolicitudesAdminCrearComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[LoginComponent,
     MenuComponent],
+    providers:[InventarioSalidaComponent],
   imports: [
     CommonModule,
      IonicModule,

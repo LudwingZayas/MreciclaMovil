@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { style } from '@angular/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { InventarioSalidaCrearComponent } from './components/inventario-salida/inventario-salida-crear/inventario-salida-crear.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 ],
 
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,   }],
+  
   bootstrap: [AppComponent],
 })
 export class AppModule {}

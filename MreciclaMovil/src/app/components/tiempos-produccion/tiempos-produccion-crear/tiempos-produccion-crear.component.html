@@ -1,94 +1,176 @@
-<app-menu></app-menu>
+<app-menu scrollX="true" scrollY="false"></app-menu>
+<ion-content >
+
 <div style="text-align: center;">
   <h1 style="align-items: center;">Registro de tiempos producción</h1>
 </div>
+
+
 <ion-grid style="height: 900;">
+  <div>
+    <ion-row style="height: 900;">
+      <ion-col>
+        <ion-item>
+          <ion-select style="height: 55px;" placeholder="Maquina">
+            <ion-select-option value="ROMPEDORA">ROMPEDORA</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 1</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 2</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 3</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 4</ion-select-option>
+            <ion-select-option value="OPEN">OPEN</ion-select-option>
+          </ion-select>
+        </ion-item>    
+        </ion-col>
+      <ion-col>
+        <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
+        <ion-item>
+          <ion-select style="height: 55px;" placeholder="Tipo de proceso">
+            <ion-select-option value="ROLLO DE TELA">ROLLO DE TELA</ion-select-option>
+            <ion-select-option value="ROMPER TELA">ROMPER TELA</ion-select-option>
+            <ion-select-option value="DESFIBRAR TELA ROTA">DESFIBRAR TELA ROTA</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Hora de inicio</ion-label>
+          <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+        </ion-item>      
+      </ion-col>
+      <ion-col>
+        <ion-item>
+        <ion-label position="floating">Hora de fin</ion-label>
+        <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button style="width: 170px;" color="success" >Apuntar hora</ion-button>
+      </ion-col>
+    
+      <ion-col>
+        <ion-button  style="width: 170px;" color="success" (click)="Salir()">Apuntar hora</ion-button>
+      </ion-col>
+    </ion-row>
+    <!--  -->
+    <ion-row style="height: 900;">
+      <ion-col>
+        <ion-item>
+          <ion-select style="height: 55px;" placeholder="Maquina">
+            <ion-select-option value="ROMPEDORA">ROMPEDORA</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 1</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 2</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 3</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 4</ion-select-option>
+            <ion-select-option value="OPEN">OPEN</ion-select-option>
+          </ion-select>
+        </ion-item>    
+        </ion-col>
+      <ion-col>
+        <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
+        <ion-item>
+          <ion-select style="height: 55px;" placeholder="Tipo de proceso">
+            <ion-select-option value="ROLLO DE TELA">ROLLO DE TELA</ion-select-option>
+            <ion-select-option value="ROMPER TELA">ROMPER TELA</ion-select-option>
+            <ion-select-option value="DESFIBRAR TELA ROTA">DESFIBRAR TELA ROTA</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Hora de inicio</ion-label>
+          <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+        </ion-item>      
+      </ion-col>
+      <ion-col>
+        <ion-item>
+        <ion-label position="floating">Hora de fin</ion-label>
+        <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button style="width: 170px;" color="success" >Apuntar hora</ion-button>
+      </ion-col>
+    
+      <ion-col>
+        <ion-button  style="width: 170px;" color="success" (click)="Salir()">Apuntar hora</ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </div>
+
   <ion-row style="height: 900;">
     <ion-col>
-      <ion-input  type="date" label="Fecha" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
+      <ion-item>
+        <ion-select style="height: 55px;" placeholder="Maquina">
+          <ion-select-option value="ROMPEDORA">ROMPEDORA</ion-select-option>
+          <ion-select-option value="CIRCULARES">CIRCULAR 1</ion-select-option>
+          <ion-select-option value="CIRCULARES">CIRCULAR 2</ion-select-option>
+          <ion-select-option value="CIRCULARES">CIRCULAR 3</ion-select-option>
+          <ion-select-option value="CIRCULARES">CIRCULAR 4</ion-select-option>
+          <ion-select-option value="OPEN">OPEN</ion-select-option>
+        </ion-select>
+      </ion-item>    
+      </ion-col>
     <ion-col>
       <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
       <ion-item>
-        <ion-select style="height: 55px;" placeholder="Insumo">
-          <ion-select-option value="TELA">TELA</ion-select-option>
-          <ion-select-option value="BORRA">BORRA</ion-select-option>
-          <ion-select-option value="HILO">HILO</ion-select-option>
+        <ion-select style="height: 55px;" placeholder="Tipo de proceso">
+          <ion-select-option value="ROLLO DE TELA">ROLLO DE TELA</ion-select-option>
+          <ion-select-option value="ROMPER TELA">ROMPER TELA</ion-select-option>
+          <ion-select-option value="DESFIBRAR TELA ROTA">DESFIBRAR TELA ROTA</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-input type="date" label="Fecha de finalización" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <ion-input type="number" label="Unidades de insumo inicial" label-placement="floating" fill="outline" placeholder="1*"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="time" label="Hora inicio" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Prodcuto producido" label-placement="floating" fill="outline" placeholder=""></ion-input> -->
       <ion-item>
-        <ion-select style="height: 55px;" placeholder="Produccion">
-          <ion-select-option value="TELA">TELA</ion-select-option>
-          <ion-select-option value="HILO">HILO</ion-select-option>
-        </ion-select>
-      </ion-item>
+        <ion-label position="floating">Hora de inicio</ion-label>
+        <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+      </ion-item>      
     </ion-col>
-  </ion-row>
-  <ion-row>
+    
     <ion-col>
-      <ion-input type="time" label="Hora de finalización" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <ion-input type="number" label="Kg totales de produccion" label-placement="floating" fill="outline" placeholder="1*"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <!-- <ion-input  label="Area" label-placement="floating" fill="outline" placeholder="Hilatura"></ion-input> -->
       <ion-item>
-        <ion-select style="height: 55px;" placeholder="Area">
-          <ion-select-option value="TELARES">TELAES</ion-select-option>
-          <ion-select-option value="HILADO">HILADO</ion-select-option>
-          <ion-select-option value=""></ion-select-option>
-        </ion-select>
-      </ion-item>
+      <ion-label position="floating">Hora de fin</ion-label>
+      <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+     </ion-item>
     </ion-col>
-    <ion-col>
-      <ion-input  label="Turno usado" label-placement="floating" fill="outline" placeholder=""></ion-input>
-    </ion-col>
+ 
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-input type="number" label="Id Usuario" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-button style="width: 170px;" color="success" >Apuntar hora</ion-button>
+    </ion-col>
+  
+    <ion-col>
+      <ion-button  style="width: 170px;" color="success" (click)="Salir()">Apuntar hora</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
     </ion-col>
     <ion-col>
-      <!-- <ion-input  label="Maquina" label-placement="floating" fill="outline" placeholder="maquina"></ion-input> -->
       <ion-item>
-        <ion-select style="height: 55px;" placeholder="Maquina">
-          <ion-select-option value="CIRCULAR">CIRCULAR</ion-select-option>
-          <ion-select-option value="ROMPEDORA">ABRIDORA</ion-select-option>
-          <ion-select-option value="ABRIDORA">ROMPEDORA</ion-select-option>
-        </ion-select>
+        <ion-input  label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="Usuario"></ion-input>
       </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-    </ion-col>
-    <ion-col>
-      <ion-input  label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="Usuario"></ion-input>
     </ion-col>
   </ion-row>
 
 <br>
 <br>
 <ion-row>
+
   <ion-col>
     <ion-button style="width: 170px;" color="success" >GUARDAR</ion-button>
   </ion-col>
@@ -96,6 +178,9 @@
   <ion-col>
     <ion-button  style="width: 170px;" color="danger" (click)="Salir()">CANCELAR</ion-button>
   </ion-col>
+  
 </ion-row>
 </ion-grid>
 
+  
+</ion-content>

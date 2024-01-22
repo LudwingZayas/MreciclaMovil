@@ -1,5 +1,91 @@
 <app-menu></app-menu>
+<!-- etiquetas/etiquetas.page.html -->
+<!-- elementos/elementos.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generador de Elementos</ion-title>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let boton of botones">
+      <ion-button>{{ boton }}</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let input of inputs">
+      <ion-input [placeholder]="input"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Nuevo Botón</ion-label>
+    <ion-input formControlName="nuevoBoton"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nuevo Input</ion-label>
+    <ion-input formControlName="nuevoInput"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="agregarBoton()">Agregar Botón</ion-button>
+  <ion-button expand="full" (click)="agregarInput()">Agregar Input</ion-button>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <h1 style="text-align: center;">INVENTARIO SALIDA</h1>
 
 <ion-content>
@@ -22,4 +108,4 @@
     </ion-row>
   </ion-grid>
 </ion-content>
-  
+   -->

@@ -16,6 +16,7 @@ import { SolicitudesEditarComponent } from './solicitudes-admin/solicitudes-edit
 import { TiemposProduccionEditarComponent } from './tiempos-produccion/tiempos-produccion-editar/tiempos-produccion-editar.component';
 import { SolicitudesAdminCrearComponent } from './solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[LoginComponent,
-    MenuComponent],
+    MenuComponent,
+    ReactiveFormsModule, ],
   imports: [
     CommonModule,
      IonicModule,
+     ReactiveFormsModule,
+     RouterModule
+
   ]
 })
 export class ComponentsModule { }

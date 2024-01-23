@@ -28,6 +28,11 @@ const routes: Routes = [
     path: 'header', component:HeaderComponent,
   },
   {
+    path:'login', component:LoginComponent
+  }
+ ,
+ 
+  {
     path:'catalogos', component:CatalogosComponent,
   }, 
   //inventarios rutas
@@ -63,11 +68,8 @@ const routes: Routes = [
   },
   {
     path:'menu', component:MenuComponent
-  },
-  {
-    path:'login', component:LoginComponent
   }
- 
+
 
   // --->>>>>>
 ];

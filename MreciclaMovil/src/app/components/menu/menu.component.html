@@ -1,11 +1,11 @@
-<ion-menu contentId="main-content" menuId="first"  >
+<ion-menu contentId="main-content" menuId="first" animated="false" >
   <ion-header>
-    <ion-toolbar color="">
+    <ion-toolbar >
       <ion-title>Administrador</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content  class="ion-padding">
-    <div > <ion-button  expand="block"  (click)="irHeader()">INICIO</ion-button></div>
+    <div > <a [routerLink]="['/header']"> <ion-button  expand="block">INICIO</ion-button></a></div>
   <br>
     <ion-button expand="block" color="primary" (click)="irCat()">CATALOGOS</ion-button>
   </ion-content>
@@ -25,6 +25,5 @@
     
   </ion-header>
 
-  <ion-content>
-  </ion-content>
+  
 </div>

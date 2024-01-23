@@ -8,11 +8,11 @@ import { usuario } from './login';
 
 
 export class LoginService {
-  private apiUrl = 'http://localhost/PhpAngular/MreciclaMovil';
+  API: string = 'https://recicladora.arvispace.com/PhpAngular/'
 
-  constructor(private http: HttpClient) {}
+  constructor( private clientService:HttpClient) { }
 
-  iniciarSesion(datos: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, datos);
-}
+  verUsuario(datosUsuario:usuario):Observable<any>{
+    return this.clientService.post(this.API+"?login=",datosUsuario);
+  }
 }

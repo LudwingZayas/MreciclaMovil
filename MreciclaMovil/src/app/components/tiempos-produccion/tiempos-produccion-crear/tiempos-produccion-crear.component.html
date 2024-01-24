@@ -2,7 +2,7 @@
 <ion-content >
 
 <div style="text-align: center;">
-  <h1 style="align-items: center;">Registro de tiempos producción</h1>
+  <h1 style="align-items: center;">Registro de tiempos </h1>
 </div>
 
 
@@ -48,11 +48,11 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button style="width: 170px;" color="success" >Apuntar hora</ion-button>
-      </ion-col>
-    
-      <ion-col>
-        <ion-button  style="width: 170px;" color="success" (click)="Salir()">Apuntar hora</ion-button>
+        <ion-button [disabled]="!botonHabilitado3"  (click)="toggleBoton3()" style="width: 120px;" color="success" >Apuntar hora</ion-button>
+      
+        <ion-button [disabled]="botonHabilitado3"  (click)="toggleBoton3()" style="width: 120px;" color="danger" >Apuntar hora</ion-button>
+     
+        <ion-button  style="width: 120px;" color="warning" (click)="irtiemposincidencias()">INCIDENCIAS</ion-button>
       </ion-col>
     </ion-row>
     <!--  -->
@@ -96,11 +96,11 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button style="width: 170px;" color="success" >Apuntar hora</ion-button>
-      </ion-col>
-    
-      <ion-col>
-        <ion-button  style="width: 170px;" color="success" (click)="Salir()">Apuntar hora</ion-button>
+        <ion-button [disabled]="!botonHabilitado2"  (click)="toggleBoton2()" style="width: 120px;" color="success" >Apuntar hora</ion-button>
+      
+        <ion-button [disabled]="botonHabilitado2"  (click)="toggleBoton2()" style="width: 120px;" color="danger" >Apuntar hora</ion-button>
+     
+        <ion-button  style="width: 120px;" color="warning" (click)="Salir()">Incidencias</ion-button>
       </ion-col>
     </ion-row>
     
@@ -148,11 +148,11 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button style="width: 170px;" color="success" >Apuntar hora</ion-button>
-    </ion-col>
-  
-    <ion-col>
-      <ion-button  style="width: 170px;" color="success" (click)="Salir()">Apuntar hora</ion-button>
+      <ion-button  [disabled]="!botonHabilitado"  (click)="toggleBoton()" style="width: 120px;" color="success" >Apuntar hora</ion-button>
+    
+      <ion-button [disabled]="botonHabilitado"  (click)="toggleBoton()" style="width: 120px;" color="danger" >Apuntar hora</ion-button>
+   
+      <ion-button  style="width: 120px;" color="warning" (click)="Salir()">Incidencias</ion-button>
     </ion-col>
   </ion-row>
 
@@ -162,8 +162,9 @@
     </ion-col>
     <ion-col>
       <ion-item>
-        <ion-input  label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="Usuario"></ion-input>
-      </ion-item>
+        <ion-label position="floating">Usuario 1</ion-label>
+        <ion-input  type="text" formControlName="" label-placement="floating" fill="outline" placeholder="" selectedText="Operdador 1" disabled="true"></ion-input>
+       </ion-item>
     </ion-col>
   </ion-row>
 
@@ -178,7 +179,7 @@
   <ion-col>
     <ion-button  style="width: 170px;" color="danger" (click)="Salir()">CANCELAR</ion-button>
   </ion-col>
-  
+
 </ion-row>
 </ion-grid>
 

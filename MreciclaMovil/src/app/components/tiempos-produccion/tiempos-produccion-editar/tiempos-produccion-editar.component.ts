@@ -13,6 +13,8 @@ export class TiemposProduccionEditarComponent  implements OnInit {
     this.router.navigate(['/TiemposProduccion']);
   }
 
+
+
   ngOnInit() {}
 
 }

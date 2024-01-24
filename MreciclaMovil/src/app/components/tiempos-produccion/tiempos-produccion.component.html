@@ -1,21 +1,21 @@
 <app-menu></app-menu>
 
-<h1 style="text-align: center;">SOLICITUDES</h1>
+<h1 style="text-align: center;">Tiempos de producción</h1>
 
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="3">ID</ion-col>
-      <ion-col size="4">Producto</ion-col>
+      <ion-col size="2">ID</ion-col>
+      <ion-col size="3">Producto</ion-col>
       <ion-col size="3">Peso</ion-col>
-      <ion-col size="2">Action</ion-col>
+      <ion-col size="4">Action</ion-col>
     </ion-row> 
 
     <ion-row *ngFor="let solicitud of Solicitudes">
-      <ion-col size="3">{{ solicitud.id }}</ion-col>
-      <ion-col size="4">{{ solicitud.solicitud }}</ion-col>
+      <ion-col size="2">{{ solicitud.id }}</ion-col>
+      <ion-col size="3">{{ solicitud.solicitud }}</ion-col>
       <ion-col size="3">{{ solicitud.Tipo }}</ion-col>
-      <ion-col size="2">
+      <ion-col size="4">
         <ion-button expand="block" color="primary" (click)="irtiemposeditar()"><ion-icon name="create-outline"></ion-icon></ion-button>
         <ion-button color="danger" expand="block" id="present-alert"><ion-icon name="trash-bin-outline"></ion-icon></ion-button>
         <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons"></ion-alert>

@@ -42,7 +42,7 @@ export class TiemposProduccionComponent  implements OnInit {
   irtiemposcrear(){
     this.router.navigate(['/TiemposProduccionCrear'])
   }
-
+ 
   ngOnInit() {}
   
 }

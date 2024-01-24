@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,8 +14,8 @@ export class InventarioSalidaService {
     return this.botones;
   }
 
-  agregarBoton(boton: string): void {
-    this.botones.push(boton);
+  agregarBoton(nombre: string, propiedades: any): void {
+    this.botones.push(nombre,propiedades);
   }
 
   obtenerInputs(): string[] {

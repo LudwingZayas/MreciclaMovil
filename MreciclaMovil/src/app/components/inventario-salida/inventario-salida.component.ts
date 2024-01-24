@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class InventarioSalidaComponent  implements OnInit {
   //
-  botones: string[];
+  botones: any[];
   inputs: string[];
   formulario: FormGroup;
 
@@ -19,17 +19,17 @@ export class InventarioSalidaComponent  implements OnInit {
     this.botones = inventarioSalService.obtenerBotones();
     this.inputs = inventarioSalService.obtenerInputs();
     this.formulario = this.formBuilder.group({
-      nuevoBoton: ['', Validators.required],
+      nuevoBotonNombre: ['', Validators.required],
+      nuevoBotonPropiedad:[''],
       nuevoInput: ['', Validators.required]
     });
   }
 
   agregarBoton(): void {
-    const nuevoBoton = this.formulario.controls['nuevoBoton'].value;
-    this.inventarioSalService.agregarBoton(nuevoBoton);
-    this.formulario.reset();
-    const nuevoInput = this.formulario.controls['nuevoInput'].value;
-    this.inventarioSalService.agregarInput(nuevoInput);
+    const nuevoBotonNombre = this.formulario.controls['nuevoBotonNombre'].value;
+    const nuevoBotonPropiedad=this.formulario.controls['nuevoBotonPropiedad'].value;
+
+    this.inventarioSalService.agregarBoton(nuevoBotonNombre,{propiedad:nuevoBotonPropiedad});
     this.formulario.reset();
   }
   
@@ -39,6 +39,9 @@ export class InventarioSalidaComponent  implements OnInit {
     this.formulario.reset();
   }
 
+
+
+  
    
   ngOnInit() {}
 

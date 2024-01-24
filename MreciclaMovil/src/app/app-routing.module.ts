@@ -15,6 +15,7 @@ import { SolicitudesEditarComponent } from './components/solicitudes-admin/solic
 import { TiemposProduccionEditarComponent } from './components/tiempos-produccion/tiempos-produccion-editar/tiempos-produccion-editar.component';
 import { SolicitudesAdminCrearComponent } from './components/solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 import { InventarioSalidaCrearComponent } from './components/inventario-salida/inventario-salida-crear/inventario-salida-crear.component';
+import { TiemposIncidenciasComponent } from './components/tiempos-produccion/tiempos-incidencias/tiempos-incidencias.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -50,6 +51,9 @@ const routes: Routes = [
   },
   {
     path:'TiemposProduccionEditar', component:TiemposProduccionEditarComponent
+  },
+  {
+    path:'TiemposIncidencias', component:TiemposIncidenciasComponent,
   },
   //Solicitudes
   {

@@ -1,0 +1,151 @@
+<app-menu scrollX="true" scrollY="false"></app-menu>
+<ion-content >
+
+<div style="text-align: center;">
+  <h1 style="align-items: center;">Registro de incidencias </h1>
+</div>
+
+
+<ion-grid style="height: 900;">
+  <div>
+    <ion-row style="height: 900;">
+      <ion-col>
+        <ion-item>
+          
+          <ion-select style="height: 55px;" placeholder="Maquina" selectedText="CIRCULAR 1" disabled="true" >
+            <ion-select-option value="ROMPEDORA">ROMPEDORA</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 1</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 2</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 3</ion-select-option>
+            <ion-select-option value="CIRCULARES">CIRCULAR 4</ion-select-option>
+            <ion-select-option value="OPEN">OPEN</ion-select-option>
+          </ion-select>
+        </ion-item>    
+        </ion-col>
+      <ion-col>
+        <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
+        <ion-item>
+          <ion-select style="height: 55px;" placeholder="Tipo de proceso"  selectedText="ROLLO DE TELA" disabled="true">
+            <ion-select-option value="ROLLO DE TELA">ROLLO DE TELA</ion-select-option>
+            <ion-select-option value="ROMPER TELA">ROMPER TELA</ion-select-option>
+            <ion-select-option value="DESFIBRAR TELA ROTA">DESFIBRAR TELA ROTA</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Hora de inicio</ion-label>
+          <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+        </ion-item>      
+      </ion-col>
+      <ion-col>
+        <ion-item>
+        <ion-label position="floating">Hora de fin</ion-label>
+        <ion-input type="time" formControlName="horaInicio" label-placement="floating" fill="outline" placeholder="Ingrese la hora"></ion-input>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button  [disabled]="!botonHabilitado"  (click)="toggleBoton()" style="width: 120px;" color="success" >Apuntar hora</ion-button>
+      
+        <ion-button [disabled]="botonHabilitado"  (click)="toggleBoton()" style="width: 120px;" color="danger" >Apuntar hora</ion-button>
+        <ion-button  style="width: 120px;" color="warning" (click)="Salir()">REGRESAR</ion-button>
+      </ion-col>
+    </ion-row>
+    <!--  -->
+    <ion-row style="height: 900;">
+      <ion-col>
+        <ion-item>
+         
+        </ion-item>    
+        </ion-col>
+      <ion-col>
+        <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
+        <ion-item>
+         
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+       <ion-item>
+
+       </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+      
+       </ion-item>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col>
+     
+      </ion-col>
+    </ion-row> -->
+    
+  </div>
+
+  <ion-row style="height: 900;">
+    <ion-col>
+      <ion-item>
+       
+      </ion-item>    
+      </ion-col>
+    <ion-col>
+      <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
+      <ion-item>
+        
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+      
+      </ion-item>      
+    </ion-col>
+    
+    <ion-col>
+      <ion-item>
+     
+     </ion-item>
+    </ion-col>
+ 
+  </ion-row>
+  <!-- <ion-row>
+    <ion-col>
+    
+    </ion-col>
+  </ion-row> -->
+  <ion-row>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Usuario 1</ion-label>
+        <ion-input  type="text" formControlName="" label-placement="floating" fill="outline" placeholder=""  selectedText="Operador 1" disabled="true"></ion-input>
+       </ion-item>
+    </ion-col>
+  </ion-row>
+
+<br>
+<br>
+<ion-row>
+
+  <ion-col>
+    <ion-button style="width: 170px;" color="success" >GUARDAR</ion-button>
+  </ion-col>
+
+  <ion-col>
+    <ion-button  style="width: 170px;" color="danger" (click)="Salir()">CANCELAR</ion-button>
+  </ion-col>
+
+</ion-row>
+</ion-grid>
+
+  
+</ion-content>

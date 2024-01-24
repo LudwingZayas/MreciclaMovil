@@ -9,6 +9,25 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
 })
 export class TiemposProduccionCrearComponent  implements OnInit {
 
+
+  botonHabilitado = true;
+
+  toggleBoton(): void {
+    this.botonHabilitado = !this.botonHabilitado;
+  }
+
+  botonHabilitado2 = true;
+
+  toggleBoton2(): void {
+    this.botonHabilitado2 = !this.botonHabilitado2;
+  }
+
+  botonHabilitado3 = true;
+
+  toggleBoton3(): void {
+    this.botonHabilitado3 = !this.botonHabilitado3;
+  }
+
   formulario: FormGroup;
 
   constructor(private router:Router,private formBuilder: FormBuilder ) {
@@ -21,7 +40,9 @@ export class TiemposProduccionCrearComponent  implements OnInit {
     this.formulario.controls['horaInicio'].setValue(horaActual);
   }
 
-  
+  irtiemposincidencias(){
+    this.router.navigate(['\TiemposIncidencias'])
+  }
   Salir(){
     this.router.navigate(['/TiemposProduccionCrear'])
   }

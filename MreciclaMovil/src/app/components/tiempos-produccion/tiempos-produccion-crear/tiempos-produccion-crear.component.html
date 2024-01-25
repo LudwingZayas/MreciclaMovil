@@ -48,9 +48,9 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button [disabled]="!botonHabilitado3"  (click)="toggleBoton3()" style="width: 120px;" color="success" >Apuntar hora</ion-button>
+        <ion-button [disabled]="!botonHabilitado3"  (click)="toggleBoton3()" (click)="registrarInicio()" style="width: 120px;" color="success" >Apuntar hora</ion-button>
       
-        <ion-button [disabled]="botonHabilitado3"  (click)="toggleBoton3()" style="width: 120px;" color="danger" >Apuntar hora</ion-button>
+        <ion-button [disabled]="botonHabilitado3"  (click)="toggleBoton3()" (click)="registrarSalida()" style="width: 120px;" color="danger" >Apuntar hora</ion-button>
      
         <ion-button  style="width: 120px;" color="warning" (click)="irtiemposincidencias()">INCIDENCIAS</ion-button>
       </ion-col>

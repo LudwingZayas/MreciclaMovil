@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-tiempos-produccion',
   templateUrl: './tiempos-produccion.component.html',
@@ -13,11 +12,13 @@ export class TiemposProduccionComponent  implements OnInit {
       text: 'No',
       cssClass: 'alert-button-cancel',
     },
-    {
+    { 
       text: 'Yes',
       cssClass: 'alert-button-confirm',
     },
   ];
+
+ 
 
   Solicitudes = [
   { id: '1', solicitud: 'ajuste de maquina', Tipo: 'maquinaria', Action:'' },
@@ -28,11 +29,16 @@ export class TiemposProduccionComponent  implements OnInit {
   
   // ... otros datos ...
 ];
+  http: any;
 
 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) {
 
+    
+   }
+
+  
 
 
   irtiemposeditar(){

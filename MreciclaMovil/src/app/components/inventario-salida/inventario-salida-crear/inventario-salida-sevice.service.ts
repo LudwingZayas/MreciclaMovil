@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class InventarioSalidaSeviceService {
 
   private etiquetas: string[] = [];
+ 
 
   obtenerEtiquetas(): string[] {
     return this.etiquetas;
@@ -13,8 +15,9 @@ export class InventarioSalidaSeviceService {
    agregarEtiqueta(etiqueta: string): void {
     this.etiquetas.push(etiqueta);
   }
-
   constructor() {
    
   }
+
+ 
 }

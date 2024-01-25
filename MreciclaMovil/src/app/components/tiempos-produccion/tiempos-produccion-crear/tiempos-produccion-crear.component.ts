@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tiempos-produccion-crear',
@@ -9,8 +11,23 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
 })
 export class TiemposProduccionCrearComponent  implements OnInit {
 
+  
 
   botonHabilitado = true;
+  
+
+  public alertButtons = [
+    {
+      text: 'No',
+      cssClass: 'alert-button-cancel',
+    },
+    { 
+      text: 'Yes',
+      cssClass: 'alert-button-confirm',
+      routerLink: '/TiemposProduccion',
+      
+    },
+  ];
 
   toggleBoton(): void {
     this.botonHabilitado = !this.botonHabilitado;
@@ -30,7 +47,7 @@ export class TiemposProduccionCrearComponent  implements OnInit {
 
   formulario: FormGroup;
 
-  constructor(private router:Router,private formBuilder: FormBuilder ) {
+  constructor(private router:Router,private formBuilder: FormBuilder,private navCtrl: NavController ) {
     this.formulario = this.formBuilder.group({
       horaInicio: ['']
     });

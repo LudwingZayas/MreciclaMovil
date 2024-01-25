@@ -17,6 +17,7 @@ import { TiemposProduccionEditarComponent } from './tiempos-produccion/tiempos-p
 import { SolicitudesAdminCrearComponent } from './solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TiemposIncidenciasComponent } from './tiempos-produccion/tiempos-incidencias/tiempos-incidencias.component';
+import { TiemposProduccionService } from './tiempos-produccion/tiempos-produccion.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { TiemposIncidenciasComponent } from './tiempos-produccion/tiempos-incide
     SolicitudesEditarComponent,
     TiemposProduccionEditarComponent,
     SolicitudesAdminCrearComponent,
-    TiemposIncidenciasComponent
+    TiemposIncidenciasComponent,
+    
+    
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[LoginComponent,

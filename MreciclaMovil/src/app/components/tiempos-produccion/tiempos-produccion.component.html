@@ -6,15 +6,15 @@
   <ion-grid>
     <ion-row>
       <ion-col size="2">ID</ion-col>
-      <ion-col size="3">Producto</ion-col>
-      <ion-col size="3">Peso</ion-col>
+      <ion-col size="3">Hora inicio</ion-col>
+      <ion-col size="3">Hora fin</ion-col>
       <ion-col size="4">Action</ion-col>
     </ion-row> 
 
-    <ion-row *ngFor="let solicitud of Solicitudes">
-      <ion-col size="2">{{ solicitud.id }}</ion-col>
-      <ion-col size="3">{{ solicitud.solicitud }}</ion-col>
-      <ion-col size="3">{{ solicitud.Tipo }}</ion-col>
+    <ion-row *ngFor="let horario of horarios">
+      <ion-col size="2">{{ horario.idArea }}</ion-col>
+      <ion-col size="3">{{ horario.HoraInicio }}</ion-col>
+      <ion-col size="3">{{ horario.HoraFin }}</ion-col>
       <ion-col size="4">
         <ion-button expand="block" color="primary" (click)="irtiemposeditar()"><ion-icon name="create-outline"></ion-icon></ion-button>
         <ion-button color="danger" expand="block" id="present-alert"><ion-icon name="trash-bin-outline"></ion-icon></ion-button>

@@ -8,7 +8,7 @@ export class TiemposProduccionCrearService {
   private apiUrl = 'http://localhost/PhpAngular/MreciclaMovil/horarios.php';
 
   constructor(private http: HttpClient) {}
-  
+
 
   registrarHoraInicio() {
     return this.http.post(`${this.apiUrl}`, { accion: 'inicio' });

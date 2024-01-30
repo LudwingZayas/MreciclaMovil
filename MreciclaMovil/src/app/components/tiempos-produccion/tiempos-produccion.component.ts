@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TiemposProduccionService } from './tiempos-produccion.service';
 @Component({
   selector: 'app-tiempos-produccion',
   templateUrl: './tiempos-produccion.component.html',
   styleUrls: ['./tiempos-produccion.component.scss'],
 })
 export class TiemposProduccionComponent  implements OnInit {
-  
+  horarios: any[] = [];
+
   public alertButtons = [
     {
       text: 'No',
@@ -33,7 +35,7 @@ export class TiemposProduccionComponent  implements OnInit {
 
 
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private tiemposProduccion:TiemposProduccionService) {
 
     
    }
@@ -49,6 +51,17 @@ export class TiemposProduccionComponent  implements OnInit {
     this.router.navigate(['/TiemposProduccionCrear'])
   }
  
-  ngOnInit() {}
-  
+  ngOnInit() {
+    this.obtenerHorarios();
+  }
+  obtenerHorarios() {
+    this.tiemposProduccion.obtenerHorarios().subscribe(
+      data => {
+        this.horarios = data;
+      },
+      error => {
+        console.error(error);
+      }
+    );
+    }
 }

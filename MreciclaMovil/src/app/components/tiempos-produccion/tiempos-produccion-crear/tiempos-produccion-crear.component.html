@@ -62,9 +62,9 @@
           <ion-select style="height: 55px;" placeholder="Maquina">
             <ion-select-option value="ROMPEDORA">ROMPEDORA</ion-select-option>
             <ion-select-option value="CIRCULARES">CIRCULAR 1</ion-select-option>
-            <ion-select-option value="CIRCULARES">CIRCULAR 2</ion-select-option>
-            <ion-select-option value="CIRCULARES">CIRCULAR 3</ion-select-option>
-            <ion-select-option value="CIRCULARES">CIRCULAR 4</ion-select-option>
+            <ion-select-option value="CIRCULARES 2">CIRCULAR 2</ion-select-option>
+            <ion-select-option value="CIRCULARES 3">CIRCULAR 3</ion-select-option>
+            <ion-select-option value="CIRCULARES 4">CIRCULAR 4</ion-select-option>
             <ion-select-option value="OPEN">OPEN</ion-select-option>
           </ion-select>
         </ion-item>    
@@ -173,10 +173,14 @@
 <ion-row>
 
   <ion-col>
-    <ion-button color="danger" expand="block" id="present-alert" (click)="Salir()">Terminar registros </ion-button>
-    <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons"></ion-alert>
-    <!-- <ion-button expand="block" color="danger" >Eliminar</ion-button> -->  </ion-col>
-
+    <ion-button color="success" expand="block" id="present-alert">GUARDAR  </ion-button>
+    <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons" ></ion-alert>
+    </ion-col>
+<ion-col>
+  <ion-button color="danger" expand="block" id="present-alert" (click)="Salir()">Terminar registros </ion-button>
+  <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons" ></ion-alert>
+  <!-- <ion-button expand="block" color="danger" >Eliminar</ion-button> --> 
+</ion-col>
   <!-- <ion-col>
     <ion-button  style="width: 170px;" color="danger" >CANCELAR</ion-button>
   </ion-col> -->

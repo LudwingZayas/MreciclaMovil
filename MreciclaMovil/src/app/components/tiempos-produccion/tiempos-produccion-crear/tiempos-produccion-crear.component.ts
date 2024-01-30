@@ -107,7 +107,7 @@ export class TiemposProduccionCrearComponent  implements OnInit
     this.router.navigate(['\TiemposIncidencias'])
   }
   Salir(){
-    this.router.navigate(['/TiemposProduccionCrear'])
+    this.router.navigate(['/TiemposProduccion'])
   }
 
   ngOnInit() {}

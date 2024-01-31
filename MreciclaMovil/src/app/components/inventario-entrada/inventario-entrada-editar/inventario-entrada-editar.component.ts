@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-inventario-entrada-editar',
   templateUrl: './inventario-entrada-editar.component.html',
@@ -7,7 +8,11 @@ import { Router } from '@angular/router';
 })
 export class InventarioEntradaEditarComponent  implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,
+    private route: ActivatedRoute,
+    private navCtrl: NavController
+    
+    ) { }
 
   actualizarDatos() {
     // Coloca aquí la lógica para actualizar tus datos
@@ -23,6 +28,16 @@ export class InventarioEntradaEditarComponent  implements OnInit {
     this.router.navigate(['/inventarioEntrada'])
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+ // Recupera el ID de la URL usando ActivatedRoute
+ this.route.params.subscribe(params => {
+  const idInventarioEntrada = params['idInventarioEntrada'];
+  if (idInventarioEntrada) {
+    // Haz lo que necesites con el ID, por ejemplo, mostrarlo en la consola
+    console.log('ID recuperado:', idInventarioEntrada);
+  }
+});
+
+  }
 
 }

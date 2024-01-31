@@ -12,12 +12,12 @@
     </ion-row>
 
     <!-- Filas de la tabla (puedes usar *ngFor para mostrar datos dinámicamente) -->
-    <ion-row *ngFor="let Inventarios of Inventario">
-      <ion-col size="3">{{ Inventarios.id }}</ion-col>
-      <ion-col size="3">{{ Inventarios.Producto }}</ion-col>
-      <ion-col size="3">{{ Inventarios.Peso }}</ion-col>
+    <ion-row *ngFor="let Inventario of Inventarios">
+      <ion-col size="3">{{ Inventario.idInventarioFabrica}}</ion-col>
+      <ion-col size="3">{{ Inventario.NombreInsumo }}</ion-col>
+      <ion-col size="3">{{ Inventario.Peso }}</ion-col>
       <ion-col size="3">
-        <ion-button expand="block" color="primary" (click)="InventarioEditar()" >Editar</ion-button>
+        <ion-button expand="block" color="primary" (click)="abrirPantallaDetalle(Inventario.idInventarioFabrica)" >Editar</ion-button>
         <ion-button color="danger" expand="block" id="present-alert">ELIMINAR</ion-button>
         <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons"></ion-alert>
         <!-- <ion-button expand="block" color="danger" >Eliminar</ion-button> -->
@@ -25,6 +25,31 @@
     </ion-row>
   </ion-grid>
 </ion-content>
+
+
+
+<div style="height: 75px; width:100px; left: 10px;" class="">
+  <!-- <a [routerLink]="['/dashboard/produccion-empleado/produccionEmpleado']"> -->
+    <div class="card bg-c-yellow order-card">
+        <!-- <div class="card-block" (click)="irtiemposcrear()">
+            <p class="m-b-0 title-card">Registrar tiempos</p>
+        </div> -->
+        <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+          <ion-fab-button>
+            <ion-icon name="chevron-up-circle"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button>
+              <ion-icon name="add-outline" (click)="InventarioEditar()"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+              <ion-icon name="globe"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+    </div>
+  <!-- </a> -->
+  </div>
  
 
 

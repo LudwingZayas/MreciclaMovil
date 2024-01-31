@@ -40,7 +40,7 @@ export class TiemposProduccionComponent  implements OnInit {
     
    }
 
-  
+ 
 
 
   irtiemposeditar(){

@@ -37,7 +37,7 @@ const routes: Routes = [
     path:'inventarioEntrada', component:InventarioEntradaComponent,
   },
   {
-    path:'inventarioEditar', component:InventarioEntradaEditarComponent
+    path:'inventarioEditar/:id', component:InventarioEntradaEditarComponent
   },
   {
     path:'inventarioSalidaCrear', component:InventarioSalidaCrearComponent

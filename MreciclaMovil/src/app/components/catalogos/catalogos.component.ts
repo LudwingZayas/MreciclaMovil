@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 export class CatalogosComponent  implements OnInit {
 
   constructor(private router:Router) { }
-
+  Areas(){
+    this.router.navigate(['/areas'])
+  }
   ngOnInit() {}
 
 }

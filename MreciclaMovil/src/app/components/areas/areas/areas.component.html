@@ -1,0 +1,67 @@
+<!-- Se llama al componente menu -->
+<app-menu></app-menu>
+
+<!-- Ponemos el header del modulo -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Áreas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Aqui comienza el content -->
+<ion-content class="ion-padding">
+  <!-- Filtro de área -->
+  <ion-row class="filter-row">
+    <ion-col size="12" size-md="6">
+      <ion-item>
+        <ion-label>Área</ion-label>
+        <ion-select (ionChange)="onAreaChange($event)">
+          <ion-select-option value="">Todos</ion-select-option>
+          <ion-select-option *ngFor="let area of areas" [value]="area.NombreArea">{{ area.NombreArea }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6" size-md="3">
+      <ion-button expand="full" color="success" (click)="aplicarFiltro()">BUSCAR</ion-button>
+    </ion-col>
+    <ion-col size="6" size-md="3">
+      <ion-button expand="full" color="primary" (click)="crearArea()">AGREGAR</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <!-- Inicia contenedor de tabla -->
+  <ion-scroll scrollX="true" scrollY="true" style="height: 100%; width: 100%;">
+    <ion-table class="custom-table">
+      <!-- El encabezado de las columnas -->
+      <ion-row class="header-row">
+        <ion-col  style="width:10%">ID Área</ion-col>
+        <ion-col>Nombre Área</ion-col>
+        <ion-col>Descripción Área</ion-col>
+        <ion-col>Estado Área</ion-col>
+        <ion-col *ngIf="usuarioTienePermisoSuper">Empresa</ion-col>
+        <ion-col>Acción</ion-col>
+      </ion-row>
+      <!-- Se llena la tabla con datos de la BD según la columna -->
+      <ion-row *ngFor="let element of dataSource.data">
+        <ion-col  style="width:10%">{{ element.idArea }}</ion-col>
+        <ion-col style="width:20%" >{{ element.NombreArea }}</ion-col>
+        <ion-col style="width:20%">{{ element.DescripcionArea }}</ion-col>
+        <ion-col  style="width:10%">
+          <ion-label [class.activo]="element.EstadoArea === 'Activo'" [class.inactivo]="element.EstadoArea === 'Inactivo'" [class.mantenimiento]="element.EstadoArea === 'Mantenimiento'">
+            {{ element.EstadoArea }}
+          </ion-label>
+        </ion-col>
+        <ion-col *ngIf="usuarioTienePermisoSuper">{{ element.Empresa }}</ion-col>
+        <ion-col  style="width:10%">
+          <ion-button  class="custom-button" color="success" (click)="verDetalles(element)">Editar</ion-button>
+          <ion-button  class="custom-button" color="danger" (click)="mostrarDialogoDeConfirmacion(element)">Eliminar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-table>
+  </ion-scroll>
+  <ion-row *ngIf="!seEncontraronDatos">
+    <ion-col>
+      <ion-label>Ningún dato coincide con: "{{ selectedArea }}"</ion-label>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    min-width: 70vh;
+    max-width: 100vh;
+  }
+  
+  .table {
+    text-align: center;
+    border: 1px solid blue;
+    width: 999px;
+  }
+  
+  .Filter {
+    margin-left: 3rem;
+  }
+  
+  .mat-form-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  button.mat-button {
+    background-color: #d6e44b;
+    margin-left: 1rem;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  .cabecera {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 13rem;
+    width: 80rem;
+  }
+  
+  .Filter {
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+  }
+  
+  button.mat-button {
+    background-color: #d6e44b;
+    margin-left: 1rem;
+  }
+  
+  .formula {
+    display: flex;
+    margin-right: 13rem;
+    width: 40rem;
+    overflow-y: auto;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  .formula1,
+  .formula2 {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mat-form-field {
+    margin: 1rem 0;
+    flex: 1;
+  }
+  
+  .mat-label {
+    margin-bottom: 0.5rem;
+    width: 80%;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .botones {
+    padding-left: 12.5rem;
+  }
+  
+  label {
+    font-size: 17px;
+  }
+  

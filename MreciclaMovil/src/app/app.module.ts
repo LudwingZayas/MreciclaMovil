@@ -10,6 +10,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';  // Mantén solo ReactiveFormsModule
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,  // Mantén solo ReactiveFormsModule
     HttpClientModule,
     RouterModule,
+    FormsModule,
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

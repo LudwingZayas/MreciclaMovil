@@ -17,6 +17,11 @@ import { TiemposProduccionEditarComponent } from './tiempos-produccion/tiempos-p
 import { SolicitudesAdminCrearComponent } from './solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AreasComponent } from './areas/areas/areas.component';
+import { AreasCreateComponent } from './areas/areas-create/areas-create.component';
+import { AvisoDialogComponent } from './aviso-dialog/aviso-dialog.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,10 @@ import { RouterModule } from '@angular/router';
     SolicitudesEditarComponent,
     TiemposProduccionEditarComponent,
     SolicitudesAdminCrearComponent,
+    AreasComponent,
+    AreasCreateComponent,
+    AvisoDialogComponent,
+    ConfirmationDialogComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[LoginComponent,
@@ -41,7 +50,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
      IonicModule,
      ReactiveFormsModule,
-     RouterModule
+     RouterModule,
+     MatIconModule
 
   ]
 })

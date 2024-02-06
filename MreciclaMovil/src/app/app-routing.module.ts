@@ -14,6 +14,8 @@ import { InventarioEntradaEditarComponent } from './components/inventario-entrad
 import { SolicitudesEditarComponent } from './components/solicitudes-admin/solicitudes-editar/solicitudes-editar.component';
 import { TiemposProduccionEditarComponent } from './components/tiempos-produccion/tiempos-produccion-editar/tiempos-produccion-editar.component';
 import { SolicitudesAdminCrearComponent } from './components/solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
+import { AreasComponent } from './components/areas/areas/areas.component';
+import { AreasCreateComponent } from './components/areas/areas-create/areas-create.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -25,13 +27,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path:'menu', component:MenuComponent
+  },
+  {
     path: 'header', component:HeaderComponent,
   },
   {
     path:'login', component:LoginComponent
-  }
- ,
- 
+  },
+
   {
     path:'catalogos', component:CatalogosComponent,
   }, 
@@ -62,16 +66,16 @@ const routes: Routes = [
   {
     path:'SolicitudesCrear', component:SolicitudesAdminCrearComponent
   },
-  //
   {
     path:'InventarioSalida', component:InventarioSalidaComponent
   },
   {
-    path:'menu', component:MenuComponent
+    path:'areas', component:AreasComponent
+  },
+  {
+    path:'areascreate', component:AreasCreateComponent
   }
-
-
-  // --->>>>>>
+  //>
 ];
 @NgModule({
   imports: [

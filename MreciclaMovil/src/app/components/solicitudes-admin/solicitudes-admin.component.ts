@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SolicitudesAdminService } from './solicitudes-admin.service';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-solicitudes-admin',
   templateUrl: './solicitudes-admin.component.html',
   styleUrls: ['./solicitudes-admin.component.scss'],
 })
 export class SolicitudesAdminComponent  implements OnInit {
+  Solicitudes: any[] = [];
 
   public alertButtons = [
     {
@@ -17,25 +20,44 @@ export class SolicitudesAdminComponent  implements OnInit {
       cssClass: 'alert-button-confirm',
     },
   ];
-
-  Solicitudes = [
-  { id: '1', solicitud: 'ajuste de maquina', Estado: 'pendiente', Action:'' },
-  { id: '2', solicitud: 'Mas insumos', Estado: 'pendiente',Action:'' },
-  { id: '3', solicitud: 'pendiente', Estado: 'pendiente',Action:'' },
-  { id: '4', solicitud: 'presupuesto para ajustar maquina', Estado: 'pendiente',Action:'' },
-  { id: '5', solicitud: 'presupuesto para piezas', Estado: 'pendiente',Action:'' },
-  
-  // ... otros datos ...
-];
+ 
 
 
-  constructor(private router:Router) { }
 
+  constructor(private router:Router, private solicitudesAdminService:SolicitudesAdminService, private navCtrl: NavController) { }
+
+  abrirPantallaDetalle(idSol: number) {
+    this.navCtrl.navigateForward(`/VerSolicitudes/${idSol}`);
+  }
 
   SolicitudesCrear(){
     this.router.navigate(['/SolicitudesCrear'])
   }
+  SolicitudesAdmin(){
+    this.router.navigate(['/VerSolicitudes'])
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.obtenerSolicitudes();
+  }
+
+  obtenerSolicitudes() {
+    this.solicitudesAdminService.obtenerSolicitudes().subscribe(
+      data => {
+        this.Solicitudes = data;
+      },
+      error => {
+        console.error(error);
+      }
+    );
+    }
+  
+
+
 
 }
+
+
+
+
+

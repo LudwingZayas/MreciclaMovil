@@ -18,6 +18,8 @@ import { SolicitudesAdminCrearComponent } from './solicitudes-admin/solicitudes-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TiemposIncidenciasComponent } from './tiempos-produccion/tiempos-incidencias/tiempos-incidencias.component';
 import { TiemposProduccionService } from './tiempos-produccion/tiempos-produccion.service';
+import { VerSolicitudesAdminComponent } from './solicitudes-admin/ver-solicitudes-admin/ver-solicitudes-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { TiemposProduccionService } from './tiempos-produccion/tiempos-produccio
     TiemposProduccionEditarComponent,
     SolicitudesAdminCrearComponent,
     TiemposIncidenciasComponent,
+    VerSolicitudesAdminComponent
+    
     
     
   ],

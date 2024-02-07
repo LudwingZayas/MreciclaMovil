@@ -6,17 +6,17 @@
   <ion-grid>
     <ion-row>
       <ion-col size="1">ID</ion-col>
-      <ion-col size="4">Solicitud</ion-col>
+      <ion-col size="4">titulo</ion-col>
       <ion-col size="3">Estado</ion-col>
       <ion-col size="4">Action</ion-col>
     </ion-row> 
 
     <ion-row *ngFor="let solicitud of Solicitudes">
-      <ion-col size="1">{{ solicitud.id }}</ion-col>
-      <ion-col size="4">{{ solicitud.solicitud }}</ion-col>
-      <ion-col size="3">{{ solicitud.Estado }}</ion-col>
+      <ion-col size="1">{{ solicitud.idSol }}</ion-col>
+      <ion-col size="4">{{ solicitud.titulo }}</ion-col>
+      <ion-col size="3">{{ solicitud.estado }}</ion-col>
       <ion-col size="4">
-        <ion-button expand="block" color="primary" >Ver Solicitud</ion-button>
+        <ion-button expand="block" color="primary" (click)="abrirPantallaDetalle(solicitud.idSol)"  >Ver Solicitud</ion-button>
         <ion-button color="danger" expand="block" id="present-alert">ELIMINAR</ion-button>
         <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons"></ion-alert>
         <!-- <ion-button expand="block" color="danger" >Eliminar</ion-button> -->

@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AreasComponent } from './areas/areas/areas.component';
 import { AreasCreateComponent } from './areas/areas-create/areas-create.component';
+import { AreasEditComponent } from './areas/areas-edit/areas-edit.component';
 import { AvisoDialogComponent } from './aviso-dialog/aviso-dialog.component';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -39,6 +40,7 @@ import { MatIconModule } from '@angular/material/icon';
     SolicitudesAdminCrearComponent,
     AreasComponent,
     AreasCreateComponent,
+    AreasEditComponent,
     AvisoDialogComponent,
     ConfirmationDialogComponent
   ],

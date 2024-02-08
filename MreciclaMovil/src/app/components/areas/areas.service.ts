@@ -59,4 +59,12 @@ import { areasList } from './areasList';
   getidFabrica(): string{
     return this.fabrica = localStorage.getItem("idFabrica") || '';
   }
+  consultarArea(id: any):Observable<any>{
+    return this.clientService.get(this.API + "?consultarArea=" + id);
+  }
+
+  actualizarArea(id: any, datosArea: Areas): Observable<any> {
+    return this.clientService.post(this.API + "?actualizarAreas=" + id, datosArea);
+  }
+
 }

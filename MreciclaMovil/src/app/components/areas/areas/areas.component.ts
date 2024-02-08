@@ -41,7 +41,7 @@ export class AreasComponent  implements OnInit {
     console.log('Detalles de:');
     // Puedes abrir un modal, mostrar información adicional, etc.
     const idArea = element.idArea;
-    this.router.navigateByUrl(`/dashboard/areas/areasedit/${idArea}`);
+    this.router.navigateByUrl(`areas-edit/${idArea}`);
   }
   constructor(private router:Router,
               private dialog: MatDialog,

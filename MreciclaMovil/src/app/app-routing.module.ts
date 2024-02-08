@@ -16,6 +16,7 @@ import { TiemposProduccionEditarComponent } from './components/tiempos-produccio
 import { SolicitudesAdminCrearComponent } from './components/solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 import { AreasComponent } from './components/areas/areas/areas.component';
 import { AreasCreateComponent } from './components/areas/areas-create/areas-create.component';
+import { AreasEditComponent } from './components/areas/areas-edit/areas-edit.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -74,6 +75,9 @@ const routes: Routes = [
   },
   {
     path:'areascreate', component:AreasCreateComponent
+  },
+  {
+    path:'areas-edit/:id', component:AreasEditComponent
   }
   //>
 ];

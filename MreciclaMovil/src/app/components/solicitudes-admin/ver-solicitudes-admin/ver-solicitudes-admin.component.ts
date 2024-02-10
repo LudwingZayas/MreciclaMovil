@@ -13,6 +13,11 @@ export class VerSolicitudesAdminComponent  implements OnInit {
     private navCtrl: NavController
     ) { }
 
+    regresar(){
+      this.router.navigate(['/SolicitudesAdmin'])
+    }
+
+
   ngOnInit() {
      // Recupera el ID de la URL usando ActivatedRoute
  this.route.params.subscribe(params => {

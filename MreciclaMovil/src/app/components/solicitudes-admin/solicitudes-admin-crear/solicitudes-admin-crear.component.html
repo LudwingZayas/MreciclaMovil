@@ -1,98 +1,38 @@
 <app-menu></app-menu>
-<div style="text-align: center;">
-  <h1 style="align-items: center;">Editar Inventario</h1>
-</div>
-<ion-grid style="height: 900;">
-  <ion-row style="height: 900;">
-    <ion-col>
-      <ion-input  type="date" label="Fecha" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Producto">
-          <ion-select-option value="TELA">TELA</ion-select-option>
-          <ion-select-option value="BORRA">BORRA</ion-select-option>
-          <ion-select-option value="HILO">HILO</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="date" label="Fecha de finalización" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <ion-input type="number" label="Unidades de insumo inicial" label-placement="floating" fill="outline" placeholder="1*"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="time" label="Hora inicio" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Prodcuto producido" label-placement="floating" fill="outline" placeholder=""></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Produccion">
-          <ion-select-option value="TELA">TELA</ion-select-option>
-          <ion-select-option value="HILO">HILO</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="time" label="Hora de finalización" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <ion-input type="number" label="Kg totales de produccion" label-placement="floating" fill="outline" placeholder="1*"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <!-- <ion-input  label="Area" label-placement="floating" fill="outline" placeholder="Hilatura"></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Area">
-          <ion-select-option value="TELARES">TELAES</ion-select-option>
-          <ion-select-option value="HILADO">HILADO</ion-select-option>
-          <ion-select-option value=""></ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-input  label="Turno usado" label-placement="floating" fill="outline" placeholder=""></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="number" label="Id Usuario" label-placement="floating" fill="outline" placeholder=""></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Maquina" label-placement="floating" fill="outline" placeholder="maquina"></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Maquina">
-          <ion-select-option value="CIRCULAR">CIRCULAR</ion-select-option>
-          <ion-select-option value="ROMPEDORA">ABRIDORA</ion-select-option>
-          <ion-select-option value="ABRIDORA">ROMPEDORA</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-    </ion-col>
-    <ion-col>
-      <ion-input  label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="Usuario"></ion-input>
-    </ion-col>
-  </ion-row>
-<br>
-<br>
-<ion-row>
-  <ion-col>
-    <ion-button style="width: 170px;" color="success">GUARDAR</ion-button>
-  </ion-col>
-  <ion-col>
-    <ion-button  style="width: 170px;" color="danger" (click)="Salir()"  >CANCELAR</ion-button>
-  </ion-col>
-</ion-row>
-</ion-grid>
+
+  <ion-toolbar>
+    <ion-title>
+      Formulario de Solicitud
+    </ion-title>
+  </ion-toolbar>
+
+
+<ion-content>
+  <ion-list>
+    <!-- <ion-item>
+      <ion-label position="floating">ID Solicitud</ion-label>
+      <ion-input type="text" [(ngModel)]="idSol"></ion-input>
+    </ion-item> -->
+
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea [(ngModel)]="descripcion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-select [(ngModel)]="estado">
+        <ion-select-option value="1">Pendiente</ion-select-option>
+        <ion-select-option value="2">Aprobado</ion-select-option>
+        <ion-select-option value="3">Declinado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" (click)="enviarDatos()">Enviar Datos</ion-button>
+  </ion-list>
+</ion-content>

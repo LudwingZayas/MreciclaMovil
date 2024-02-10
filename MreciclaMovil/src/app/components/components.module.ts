@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TiemposIncidenciasComponent } from './tiempos-produccion/tiempos-incidencias/tiempos-incidencias.component';
 import { TiemposProduccionService } from './tiempos-produccion/tiempos-produccion.service';
 import { VerSolicitudesAdminComponent } from './solicitudes-admin/ver-solicitudes-admin/ver-solicitudes-admin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,11 +44,11 @@ import { VerSolicitudesAdminComponent } from './solicitudes-admin/ver-solicitude
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
     exports:[LoginComponent,
-    MenuComponent],
+    MenuComponent,HttpClientModule],
     providers:[InventarioSalidaComponent],
   imports: [
     CommonModule,
-     IonicModule,
+     IonicModule,HttpClientModule
   ]
 })
 export class ComponentsModule { }

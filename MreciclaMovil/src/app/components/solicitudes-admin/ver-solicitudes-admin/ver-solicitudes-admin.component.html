@@ -2,19 +2,52 @@
 <div style="text-align: center;">
   <h1 style="align-items: center;">Solicitud</h1>
 </div>
-<ion-grid style="height: 900;">
+ 
+<ion-grid scrollX="true" scrollY="false" style="height: 900;">
   <ion-row style="height: 900;">
     <ion-col>
-      <ion-input  type="text" label="Agujas" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <h1>Titulo</h1>
+      <ion-item>
+        <ion-textarea
+          [disabled]="true"
+          placeholder="Type something here"
+          [autoGrow]="true"
+          value="Agujas">
+        </ion-textarea>
+      </ion-item>   
+     </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <h1>Descripción</h1>
+      <!-- <ion-input type="text" label="" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input> -->
+      <ion-item>
+        <ion-textarea
+          [disabled]="true"
+          placeholder="Type something here"
+          [autoGrow]="true"
+          value="se requiere comprar paquetes de agujas para la maquina ya que presenta ruptura de gancho,se requiere comprar paquetes de agujas para la maquina ya que presenta ruptura de gancho">
+        </ion-textarea>
+      </ion-item>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-input type="text" label="se requiere comprar paquetes de agujas para la maquina ya que presenta ruptura de gancho" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <h1>Costo</h1>
+      <!-- <ion-input type="text" label="" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input> -->
+      <ion-item>
+        <ion-textarea
+        [disabled]="true"
+        placeholder="Type something here"
+        [autoGrow]="true"
+        value="2000">
+      </ion-textarea>
+      </ion-item>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
+      <h1>Estado</h1>
       <!-- <ion-input  label="Prodcuto producido" label-placement="floating" fill="outline" placeholder=""></ion-input> -->
       <ion-item>
         <ion-select style="height: 55px;" placeholder="pendiente">

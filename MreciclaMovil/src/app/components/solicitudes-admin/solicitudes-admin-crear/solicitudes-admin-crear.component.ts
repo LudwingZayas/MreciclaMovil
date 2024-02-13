@@ -16,9 +16,7 @@ export class SolicitudesAdminCrearComponent  implements OnInit {
 
   constructor(private router:Router,private toastController: ToastController,private solicitudService:SolicitudesAdminCrearService) { }
 
-  titulo: string;
-
-
+  
   async enviarDatos() {
     const datosSolicitud = {
       // idSol: this.idSol,

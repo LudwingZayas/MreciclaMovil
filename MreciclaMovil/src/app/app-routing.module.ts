@@ -30,6 +30,8 @@ const routes: Routes = [
   {
     path: 'header', component:HeaderComponent,
   },
+   //Catalogos 
+
   {
     path:'catalogos', component:CatalogosComponent,
   }, 
@@ -78,8 +80,9 @@ const routes: Routes = [
   },
   {
     path:'login', component:LoginComponent
-  }
+  },
  
+
 
   // --->>>>>>
 ];

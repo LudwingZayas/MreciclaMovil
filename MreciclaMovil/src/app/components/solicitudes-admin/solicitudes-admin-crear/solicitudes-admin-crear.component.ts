@@ -9,7 +9,7 @@ import { SolicitudesAdminCrearService } from './solicitudes-admin-crear.service'
   styleUrls: ['./solicitudes-admin-crear.component.scss'],
 })
 export class SolicitudesAdminCrearComponent  implements OnInit {
-  // idSol: any;
+  idSol: any;
   titulo: any;
   descripcion: any;
   estado: any;
@@ -19,7 +19,7 @@ export class SolicitudesAdminCrearComponent  implements OnInit {
   
   async enviarDatos() {
     const datosSolicitud = {
-      // idSol: this.idSol,
+     idSol: this.idSol,
       titulo: this.titulo,
       descripcion: this.descripcion,
       estado: this.estado
@@ -42,7 +42,7 @@ export class SolicitudesAdminCrearComponent  implements OnInit {
   }
 
   resetearFormulario() {
-    // this.idSol = '';
+    this.idSol = '';
     this.titulo = '';
     this.descripcion = '';
     this.estado = '';

@@ -9,10 +9,10 @@
 
 <ion-content>
   <ion-list>
-    <!-- <ion-item>
+    <ion-item>
       <ion-label position="floating">ID Solicitud</ion-label>
       <ion-input type="text" [(ngModel)]="idSol"></ion-input>
-    </ion-item> -->
+    </ion-item>
 
     <ion-item>
       <ion-label position="floating">Título</ion-label>
@@ -25,14 +25,15 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Estado</ion-label>
+      <!-- <ion-label position="floating">Estado</ion-label>
       <ion-select [(ngModel)]="estado">
         <ion-select-option value="1">Pendiente</ion-select-option>
-        <ion-select-option value="2">Aprobado</ion-select-option>
-        <ion-select-option value="3">Declinado</ion-select-option>
-      </ion-select>
+      </ion-select> -->
+      <ion-label position="floating">Estado </ion-label>
+      <ion-textarea [(ngModel)]="estado"></ion-textarea>
     </ion-item>
 
     <ion-button expand="block" (click)="enviarDatos()">Enviar Datos</ion-button>
+    <ion-button color="danger" expand="block" (click)="Salir()">Cancelar</ion-button>
   </ion-list>
 </ion-content>

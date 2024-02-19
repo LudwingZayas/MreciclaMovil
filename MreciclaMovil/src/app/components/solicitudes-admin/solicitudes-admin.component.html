@@ -16,7 +16,7 @@
       <ion-col size="4">{{ solicitud.titulo }}</ion-col>
       <ion-col size="3">{{ solicitud.estado }}</ion-col>
       <ion-col size="4">
-        <ion-button expand="block" color="primary" (click)="abrirPantallaDetalle(solicitud.idSol)"  >Ver Solicitud</ion-button>
+        <ion-button expand="block" color="primary" (click)="abrirPantallaDetalle(solicitud.idSol)">Ver Solicitud</ion-button>
         <ion-button color="danger" expand="block" id="present-alert">ELIMINAR</ion-button>
         <ion-alert trigger="present-alert" class="" header="¿Seguro que deseas eliminar este registro?" [buttons]="alertButtons"></ion-alert>
         <!-- <ion-button expand="block" color="danger" >Eliminar</ion-button> -->

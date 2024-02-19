@@ -17,6 +17,7 @@ import { SolicitudesAdminCrearComponent } from './components/solicitudes-admin/s
 import { InventarioSalidaCrearComponent } from './components/inventario-salida/inventario-salida-crear/inventario-salida-crear.component';
 import { TiemposIncidenciasComponent } from './components/tiempos-produccion/tiempos-incidencias/tiempos-incidencias.component';
 import { VerSolicitudesAdminComponent } from './components/solicitudes-admin/ver-solicitudes-admin/ver-solicitudes-admin.component';
+import { SolicitudesEmpleadoComponent } from './components/solicitudes-admin/solicitudes-empleado/solicitudes-empleado.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -70,6 +71,9 @@ const routes: Routes = [
   },
   {
     path:'VerSolicitudes/:id', component:VerSolicitudesAdminComponent
+  },
+  {
+    path:'SolicitudesEmpleado', component:SolicitudesEmpleadoComponent
   },
   //
   {

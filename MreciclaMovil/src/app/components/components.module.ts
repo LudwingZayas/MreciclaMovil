@@ -20,6 +20,7 @@ import { TiemposIncidenciasComponent } from './tiempos-produccion/tiempos-incide
 import { TiemposProduccionService } from './tiempos-produccion/tiempos-produccion.service';
 import { VerSolicitudesAdminComponent } from './solicitudes-admin/ver-solicitudes-admin/ver-solicitudes-admin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SolicitudesEmpleadoComponent } from './solicitudes-admin/solicitudes-empleado/solicitudes-empleado.component';
 
 
 @NgModule({
@@ -37,8 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     TiemposProduccionEditarComponent,
     SolicitudesAdminCrearComponent,
     TiemposIncidenciasComponent,
-    VerSolicitudesAdminComponent
-    
+    VerSolicitudesAdminComponent,
+    SolicitudesEmpleadoComponent
     
     
   ],

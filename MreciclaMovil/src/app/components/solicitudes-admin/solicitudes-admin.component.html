@@ -11,10 +11,10 @@
       <ion-col size="4">Action</ion-col>
     </ion-row> 
 
-    <ion-row *ngFor="let solicitud of Solicitudes">
-      <ion-col size="1">{{ solicitud.id }}</ion-col>
-      <ion-col size="4">{{ solicitud.solicitud }}</ion-col>
-      <ion-col size="3">{{ solicitud.Estado }}</ion-col>
+    <ion-row *ngFor="let element of dataSource.data">
+      <ion-col size="1">{{ element.idSolicitud }}</ion-col>
+      <ion-col size="4">{{ element.nombreProducto }}</ion-col>
+      <ion-col size="3">{{ element.Peso }}</ion-col>
       <ion-col size="4">
         <ion-button expand="block" color="primary" >Ver Solicitud</ion-button>
         <ion-button color="danger" expand="block" id="present-alert">ELIMINAR</ion-button>

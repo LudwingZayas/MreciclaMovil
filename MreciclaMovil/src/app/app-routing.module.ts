@@ -16,6 +16,7 @@ import { TiemposProduccionEditarComponent } from './components/tiempos-produccio
 import { SolicitudesAdminCrearComponent } from './components/solicitudes-admin/solicitudes-admin-crear/solicitudes-admin-crear.component';
 import { AreasComponent } from './components/areas/areas/areas.component';
 import { AreasCreateComponent } from './components/areas/areas-create/areas-create.component';
+
 const routes: Routes = [
   {
     path: 'home',

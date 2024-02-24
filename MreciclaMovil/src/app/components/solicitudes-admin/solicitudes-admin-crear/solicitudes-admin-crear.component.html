@@ -1,98 +1,47 @@
 <app-menu></app-menu>
 <div style="text-align: center;">
-  <h1 style="align-items: center;">Editar Inventario</h1>
+  <h1 style="align-items: center;">Crear Una Solicitud</h1>
 </div>
-<ion-grid style="height: 900;">
-  <ion-row style="height: 900;">
-    <ion-col>
-      <ion-input  type="date" label="Fecha" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Insumo" label-placement="floating" fill="outline" placeholder="Ingresar insumo"></ion-input> -->
+
+  
+  <ion-content class="ion-padding">
+    <form [formGroup]="formularioSolicitudesAdmin" (ngSubmit)="enviarDatosSolicitud()">
       <ion-item>
-        <ion-select style="height: 55px;" placeholder="Producto">
-          <ion-select-option value="TELA">TELA</ion-select-option>
-          <ion-select-option value="BORRA">BORRA</ion-select-option>
-          <ion-select-option value="HILO">HILO</ion-select-option>
+        <ion-label position="floating">Titulo</ion-label>
+        <ion-input formControlName="titulo"  type="text"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea formControlName="descripcion"></ion-textarea>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Presupuesto</ion-label>
+        <ion-input formControlName="presupuesto" type="number"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Fecha de petición</ion-label>
+        <ion-input formControlName="fechaPeticion" type="date"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label>Estado de la solicitud</ion-label>
+        <ion-select >
+          <ion-select-option [disabled]="false" value="1">pendiente</ion-select-option>
         </ion-select>
       </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="date" label="Fecha de finalización" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <ion-input type="number" label="Unidades de insumo inicial" label-placement="floating" fill="outline" placeholder="1*"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="time" label="Hora inicio" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Prodcuto producido" label-placement="floating" fill="outline" placeholder=""></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Produccion">
-          <ion-select-option value="TELA">TELA</ion-select-option>
-          <ion-select-option value="HILO">HILO</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="time" label="Hora de finalización" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-    </ion-col>
-    <ion-col>
-      <ion-input type="number" label="Kg totales de produccion" label-placement="floating" fill="outline" placeholder="1*"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <!-- <ion-input  label="Area" label-placement="floating" fill="outline" placeholder="Hilatura"></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Area">
-          <ion-select-option value="TELARES">TELAES</ion-select-option>
-          <ion-select-option value="HILADO">HILADO</ion-select-option>
-          <ion-select-option value=""></ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-input  label="Turno usado" label-placement="floating" fill="outline" placeholder=""></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type="number" label="Id Usuario" label-placement="floating" fill="outline" placeholder=""></ion-input>
-    </ion-col>
-    <ion-col>
-      <!-- <ion-input  label="Maquina" label-placement="floating" fill="outline" placeholder="maquina"></ion-input> -->
-      <ion-item>
-        <ion-select style="height: 55px;" placeholder="Maquina">
-          <ion-select-option value="CIRCULAR">CIRCULAR</ion-select-option>
-          <ion-select-option value="ROMPEDORA">ABRIDORA</ion-select-option>
-          <ion-select-option value="ABRIDORA">ROMPEDORA</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-    </ion-col>
-    <ion-col>
-      <ion-input  label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="Usuario"></ion-input>
-    </ion-col>
-  </ion-row>
+      <br>
+    </form>
+    <br>
 <br>
-<br>
-<ion-row>
-  <ion-col>
-    <ion-button style="width: 170px;" color="success">GUARDAR</ion-button>
-  </ion-col>
-  <ion-col>
-    <ion-button  style="width: 170px;" color="danger" (click)="Salir()"  >CANCELAR</ion-button>
-  </ion-col>
-</ion-row>
-</ion-grid>
+
+<div style="height: 300px; align-items: center;">
+  <ion-button style="width: 170px;" color="success" type="submit">GUARDAR</ion-button>
+  
+  <ion-button  style="width: 170px; " color="danger" (click)="Salir()"  >CANCELAR</ion-button>
+
+</div>
+    
+  </ion-content>
